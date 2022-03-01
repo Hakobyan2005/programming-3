@@ -1,4 +1,4 @@
-function generator(matLen, gr, grEat, pred, bact, sunk, shun) {
+function generator(matLen, gr, grEat, pred, bact, sunk, shun, amp) {
     let matrix = [];
     for (let i = 0; i < matLen; i++) {
         matrix[i] = [];
@@ -48,13 +48,21 @@ function generator(matLen, gr, grEat, pred, bact, sunk, shun) {
             matrix[x][y] = 6;
         }
     }
+    for (let i = 0; i < amp; i++) {
+        let x = Math.floor(Math.random() * matLen);
+        let y = Math.floor(Math.random() * matLen);
+        if (matrix[x][y] == 0) {
+            matrix[x][y] = 7;
+        }
+    }
+
     return matrix;
 
 }
 
 let side = 30;
 
-let matrix = generator(15, 30, 10, 8, 5, 20, 7);
+let matrix = generator(15, 30, 10, 8, 5, 20, 7, 12);
 
 
 let grassArr = []
@@ -63,6 +71,7 @@ let predatorArr = []
 let bactArr = []
 let sunkArr = []
 let shunArr = []
+let ampArr = []
 
 function setup() {
     createCanvas(matrix[0].length * side, matrix.length * side);
@@ -87,7 +96,12 @@ function setup() {
                 sunkArr.push(grE)
             } else if (matrix[y][x] == 6) {
                 let grE = new Shun(x, y)
-                 shunArr.push(grE)
+                shunArr.push(grE)
+
+            } else if (matrix[y][x] == 7) {
+                let grE = new Amp(x, y)
+                ampArr.push(grE)
+
             }
         }
     }
@@ -111,14 +125,17 @@ function draw() {
             }
             else if (matrix[y][x] == 5) {
                 fill('black')
-            }   
+            }
             else if (matrix[y][x] == 6) {
-                 fill('brown')
-            
-        }
+                fill('brown')
+
+            }
+            else if (matrix[y][x] == 7) {
+                fill("#009999")
+            }
             rect(y * side, x * side, side, side)
+        }
     }
-}
     for (let i in predatorArr) {
         predatorArr[i].mul()
         predatorArr[i].eat()
@@ -127,7 +144,7 @@ function draw() {
         bactArr[i].mul()
 
     }
-    
+
     for (let i in grassArr) {
         grassArr[i].mul()
     }
@@ -135,11 +152,18 @@ function draw() {
         grassEaterArr[i].mul()
         grassEaterArr[i].eat()
     }
-    
+
     for (let i in shunArr) {
         shunArr[i].mul()
         shunArr[i].eat()
+
     }
+    for (let i in ampArr) {
+        ampArr[i].mul()
+       
+        
+    }
+
 
 
 }
