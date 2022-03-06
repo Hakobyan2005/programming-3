@@ -1,7 +1,6 @@
 {
   "name": "programming-3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +16,8 @@
   },
   "homepage": "https://github.com/Hakobyan2005/programming-3#readme",
   "dependencies": {
-    "express": "^4.17.3"
-  }
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1"
+  },
+  "description": ""
 }

@@ -160,10 +160,5 @@ function draw() {
     }
     for (let i in ampArr) {
         ampArr[i].mul()
-       
-        
     }
-
-
-
 }
