@@ -1,9 +1,6 @@
-class GrassEater {
-    constructor(x, y) {
-        this.x = x
-        this.y = y
-        this.multiply = 0
-        this.directions = [];
+class GrassEater extends LivingCreature{
+    constructor(x, y, index) {
+        super(x, y, index)
         this.energy = 8
     }
 
@@ -99,5 +96,4 @@ class GrassEater {
             }
         }
     }
-}
-
+}    

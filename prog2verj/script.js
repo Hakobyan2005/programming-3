@@ -162,3 +162,117 @@ function draw() {
         ampArr[i].mul()
     }
 }
+
+var clickCount = 0;
+function draw2(evt) {
+    clickCount++;
+    console.log(evt);
+    var str = "sammer" + clickCount;
+    this.innerText = str;
+}
+
+
+
+function draw2() {
+    for (let y = 0; y < matrix.length; y++) {
+        for (let x = 0; x < matrix[y].length; x++) {
+            if (matrix[y][x] == 1) {
+                fill('yellow')
+            } else if (matrix[y][x] == 2) {
+                fill('red')
+            } else if (matrix[y][x] == 4) {
+                fill('yellow')
+            } else if (matrix[y][x] == 6) {
+                fill('yellow')
+            } else if (matrix[y][x] == 0) {
+                fill('#FFFFFF')
+            } else if (matrix[y][x] == 3) {
+                fill('#FFFFFF')
+            } else if (matrix[y][x] == 5) {
+                fill('red')
+            } else if (matrix[y][x] == 7) {
+                fill('#FFFFFF')
+            }
+            rect(x * side, y * side, side, side)
+        }
+    }
+}
+
+
+
+var p = document.getElementById("pElement");
+p.addEventListener("click", draw2);
+
+var clickCount = 0;
+function draw4(evt) {
+    clickCount++;
+    console.log(evt);
+    var str = "sammer" + clickCount;
+    this.innerText = str;
+}
+function draw4() {
+    for (let y = 0; y < matrix.length; y++) {
+        for (let x = 0; x < matrix[y].length; x++) {
+            if (matrix[y][x] == 1) {
+                fill('yellow')
+            } else if (matrix[y][x] == 2) {
+                fill('red')
+            } else if (matrix[y][x] == 4) {
+                fill('yellow')
+            } else if (matrix[y][x] == 6) {
+                fill('red')
+            } else if (matrix[y][x] == 0) {
+                fill('yellow')
+            } else if (matrix[y][x] == 3) {
+                fill('red')
+            } else if (matrix[y][x] == 5) {
+                fill('yellow')
+            } else if (matrix[y][x] == 7) {
+                fill('red')
+            }
+            rect(x * side, y * side, side, side)
+        }
+    }
+}
+
+
+var p = document.getElementById("pElement1");
+p.addEventListener("click", draw4);
+
+var clickCount = 0;
+function draw5(evt) {
+    clickCount++;
+    console.log(evt);
+    var str = "sammer" + clickCount;
+    this.innerText = str;
+}
+function draw5() {
+    for (let y = 0; y < matrix.length; y++) {
+        for (let x = 0; x < matrix[y].length; x++) {
+            if (matrix[y][x] == 1) {
+                fill('yellow')
+            } else if (matrix[y][x] == 2) {
+                fill('red')
+            } else if (matrix[y][x] == 4) {
+                fill('yellow')
+            } else if (matrix[y][x] == 6) {
+                fill('red')
+            } else if (matrix[y][x] == 0) {
+                fill('yellow')
+            } else if (matrix[y][x] == 3) {
+                fill('red')
+            } else if (matrix[y][x] == 5) {
+                fill('yellow')
+            } else if (matrix[y][x] == 7) {
+                fill('red')
+            }
+            rect(x * side, y * side, side, side)
+        }
+    }
+}
+
+
+var p = document.getElementById("pElement1");
+p.addEventListener("click", draw5);
+
+
