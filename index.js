@@ -22,17 +22,15 @@ let c = 0;
 let e = 0;
 let d = 0;
 let k = 0;
-let z = 0;
-let x = 0;
+let z = 0
 setInterval(function () {
    statistics.grass = a++;
    statistics.grassEater = b++;
    statistics.sunk = c++;
-   statistics.pat = e++;
-   statistics.averich = d++;
-   statistics.amenaker = k++;
-   statistics.Predator = z++;
-   statistics.grassEater = x++;
+   statistics.amp = e++;
+   statistics.shun = d++;
+   statistics.bact = k++;
+   statistics.predator = z++;
    fs.writeFile("statistics.jscon", JSON.stringify(statistics), function () {
       console.log("statics")
 
