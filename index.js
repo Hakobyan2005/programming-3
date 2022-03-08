@@ -31,6 +31,7 @@ setInterval(function () {
    statistics.shun = d++;
    statistics.bact = k++;
    statistics.predator = z++;
+   
    fs.writeFile("statistics.jscon", JSON.stringify(statistics), function () {
       console.log("statics")
 

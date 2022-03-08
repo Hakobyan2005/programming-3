@@ -160,7 +160,7 @@ function draw() {
     }
     for (let i in ampArr) {
         ampArr[i].mul()
-        
+
 
     }
 }
@@ -179,21 +179,21 @@ function draw2() {
     for (let y = 0; y < matrix.length; y++) {
         for (let x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x] == 1) {
-                fill('yellow')
+                fill('pink')
             } else if (matrix[y][x] == 2) {
-                fill('red')
+                fill('pink')
             } else if (matrix[y][x] == 4) {
-                fill('yellow')
+                fill('pink')
             } else if (matrix[y][x] == 6) {
-                fill('yellow')
+                fill('pink')
             } else if (matrix[y][x] == 0) {
-                fill('#FFFFFF')
+                fill('pink')
             } else if (matrix[y][x] == 3) {
-                fill('#FFFFFF')
+                fill('pink')
             } else if (matrix[y][x] == 5) {
-                fill('red')
+                fill('pink')
             } else if (matrix[y][x] == 7) {
-                fill('#FFFFFF')
+                fill('pink')
             }
             rect(x * side, y * side, side, side)
         }
@@ -206,8 +206,44 @@ var p = document.getElementById("pElement");
 p.addEventListener("click", draw2);
 
 var clickCount = 0;
-function draw4(evt) {
+function draw3(evt) {
     clickCount++;
+    console.log(evt);
+    var str = "winter" + clickCount;
+    this.innerText = str;
+}
+function draw3() {
+    for (let y = 0; y < matrix.length; y++) {
+        for (let x = 0; x < matrix[y].length; x++) {
+            if (matrix[y][x] == 1) {
+                fill('purple')
+            } else if (matrix[y][x] == 2) {
+                fill('red')
+            } else if (matrix[y][x] == 4) {
+                fill('brown')
+            } else if (matrix[y][x] == 6) {
+                fill('red')
+            } else if (matrix[y][x] == 0) {
+                fill('pink')
+            } else if (matrix[y][x] == 3) {
+                fill('white')
+            } else if (matrix[y][x] == 5) {
+                fill('yellow')
+            } else if (matrix[y][x] == 7) {
+                fill('green')
+            }
+            rect(x * side, y * side, side, side)
+        }
+    }
+}
+
+
+var p = document.getElementById("pElement1");
+p.addEventListener("click", draw3);
+
+var clickCount = 0;
+function draw4(evt) {
+    clickCount+=3;
     console.log(evt);
     var str = "sammer" + clickCount;
     this.innerText = str;
@@ -216,21 +252,21 @@ function draw4() {
     for (let y = 0; y < matrix.length; y++) {
         for (let x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x] == 1) {
-                fill('yellow')
+                fill('black')
             } else if (matrix[y][x] == 2) {
-                fill('red')
+                fill('grey')
             } else if (matrix[y][x] == 4) {
-                fill('yellow')
+                fill('black')
             } else if (matrix[y][x] == 6) {
-                fill('red')
+                fill('grey')
             } else if (matrix[y][x] == 0) {
-                fill('yellow')
+                fill('balck')
             } else if (matrix[y][x] == 3) {
-                fill('red')
+                fill('grey')
             } else if (matrix[y][x] == 5) {
-                fill('yellow')
+                fill('black')
             } else if (matrix[y][x] == 7) {
-                fill('red')
+                fill('grey')
             }
             rect(x * side, y * side, side, side)
         }
@@ -240,41 +276,3 @@ function draw4() {
 
 var p = document.getElementById("pElement1");
 p.addEventListener("click", draw4);
-
-var clickCount = 0;
-function draw5(evt) {
-    clickCount++;
-    console.log(evt);
-    var str = "sammer" + clickCount;
-    this.innerText = str;
-}
-function draw5() {
-    for (let y = 0; y < matrix.length; y++) {
-        for (let x = 0; x < matrix[y].length; x++) {
-            if (matrix[y][x] == 1) {
-                fill('yellow')
-            } else if (matrix[y][x] == 2) {
-                fill('red')
-            } else if (matrix[y][x] == 4) {
-                fill('yellow')
-            } else if (matrix[y][x] == 6) {
-                fill('red')
-            } else if (matrix[y][x] == 0) {
-                fill('yellow')
-            } else if (matrix[y][x] == 3) {
-                fill('red')
-            } else if (matrix[y][x] == 5) {
-                fill('yellow')
-            } else if (matrix[y][x] == 7) {
-                fill('red')
-            }
-            rect(x * side, y * side, side, side)
-        }
-    }
-}
-
-
-var p = document.getElementById("pElement1");
-p.addEventListener("click", draw5);
-
-
