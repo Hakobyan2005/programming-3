@@ -202,7 +202,7 @@ function draw2() {
 
 
 
-var p = document.getElementById("pElement");
+var p = document.getElementById("pElement1");
 p.addEventListener("click", draw2);
 
 var clickCount = 0;
@@ -238,7 +238,7 @@ function draw3() {
 }
 
 
-var p = document.getElementById("pElement1");
+var p = document.getElementById("pElement2");
 p.addEventListener("click", draw3);
 
 var clickCount = 0;
@@ -274,5 +274,60 @@ function draw4() {
 }
 
 
-var p = document.getElementById("pElement1");
+var p = document.getElementById("pElement");
 p.addEventListener("click", draw4);
+
+var statistics = {};
+let a = 45;
+let b = 10;
+let c = 20;
+let e = 10;
+let d = 10;
+let k = 10;
+let z = 11;
+setInterval(function () {
+    statistics.grass = a++;
+    statistics.grassEater = b++;
+    statistics.sunk = c++;
+    statistics.amp = e++;
+    statistics.shun = d++;
+    statistics.bact = k++;
+    statistics.Predator = z++;
+
+
+}, 6000)
+
+
+
+var clickCount = 1;
+function statis(evt) {
+    clickCount++;
+    console.log(evt);
+    var str = "sammer" + clickCount;
+    this.innerText = str;
+}
+
+function statis() {
+    console.log(setInterval(function () {
+        statistics.grass = a++;
+        statistics.grassEater = b++;
+        statistics.sunk = c++;
+        statistics.amp = e++;
+        statistics.shun = d++;
+        statistics.bact = k++;
+        statistics.Predator = z++;
+
+    }, 6000));
+
+    console.log(statistics);
+}
+
+var p = document.getElementById("pElement2");
+p.addEventListener("click", statis);
+
+
+
+
+
+
+

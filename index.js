@@ -16,13 +16,13 @@ var fs = require('fs');
 
 
 var statistics = {};
-let a = 0;
-let b = 0;
-let c = 0;
-let e = 0;
-let d = 0;
-let k = 0;
-let z = 0
+let a = 10;
+let b = 12;
+let c = 50;
+let e = 15;
+let d = 25;
+let k = 49;
+let z = 13;
 setInterval(function () {
    statistics.grass = a++;
    statistics.grassEater = b++;
@@ -34,6 +34,7 @@ setInterval(function () {
    
    fs.writeFile("statistics.jscon", JSON.stringify(statistics), function () {
       console.log("statics")
+      console.log(statistics)
 
    })
 }, 60000)
