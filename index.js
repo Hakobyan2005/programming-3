@@ -37,4 +37,4 @@ setInterval(function () {
       console.log(statistics)
 
    })
-}, 60000)
+}, 1000)
