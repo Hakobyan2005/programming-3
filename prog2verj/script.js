@@ -326,6 +326,11 @@ var p = document.getElementById("pElement2");
 p.addEventListener("click", statis);
 
 
+function windowLoad() {
+    console.log("winter");
+}
+window.onload = windowLoad;
+
 
 
 

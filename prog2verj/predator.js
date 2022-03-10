@@ -68,23 +68,25 @@ class Predator {
         var emptyCells = this.chooseCell(0);
         var newCell = random(emptyCells);
 
-        if (newCell && this.multiply >= 15) {
-            var newX = newCell[1];
-            var newY = newCell[0];
-            matrix[newY][newX] = 3;
+        setTimeout(function () {
+            if (newCell && this.multiply >= 15) {
+                var newX = newCell[1];
+                var newY = newCell[0];
+                matrix[newY][newX] = 3;
 
-            var newGr = new Predator(newX, newY);
-            predatorArr.push(newGr);
-            this.multiply = 0;
-        }
+                var newGr = new Predator(newX, newY);
+                predatorArr.push(newGr);
+                this.multiply = 0;
+            }
+        },4000)
     }
 
 
     move() {
-        this.energy--
+            this.energy--
         var emptyCells = this.chooseCell(0);
-        var newCell = random(emptyCells);
-        if (newCell && this.energy >= 0) {
+            var newCell = random(emptyCells);
+            if(newCell && this.energy >= 0) {
             var newX = newCell[0];
             var newY = newCell[1];
             matrix[newY][newX] = matrix[this.y][this.x]

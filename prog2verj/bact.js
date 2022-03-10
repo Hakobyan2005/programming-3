@@ -34,15 +34,17 @@ class Bact extends LivingCreature {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
         var newCell = random(emptyCells);
+        
+        setTimeout(function () {
+            if (newCell && this.multiply >= 16) {
+                var newX = newCell[0];
+                var newY = newCell[1];
+                matrix[newY][newX] = 4;
 
-        if (newCell && this.multiply >= 16) {
-            var newX = newCell[0];
-            var newY = newCell[1];
-            matrix[newY][newX] = 4;
-
-            var newGr = new Bact(newX, newY);
-            bactArr.push(newGr);
-            this.multiply = 0;
-        }
+                var newGr = new Bact(newX, newY);
+                bactArr.push(newGr);
+                this.multiply = 0;
+            }
+        }, 4000)
     }
 }

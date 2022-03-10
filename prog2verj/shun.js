@@ -39,16 +39,17 @@ class Shun {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
         var newCell = random(emptyCells);
+        setTimeout(function () {
+            if (newCell && this.multiply >= 15) {
+                var newX = newCell[0];
+                var newY = newCell[1];
+                matrix[newY][newX] = 6;
 
-        if (newCell && this.multiply >= 15) {
-            var newX = newCell[0];
-            var newY = newCell[1];
-            matrix[newY][newX] = 6;
-
-            var newGr = new Shun(newX, newY);
-            shunArr.push(newGr);
-            this.multiply = 0;
-        }
+                var newGr = new Shun(newX, newY);
+                shunArr.push(newGr);
+                this.multiply = 0;
+            }
+        }, 4000)
     }
     move() {
         this.energy--

@@ -1,4 +1,4 @@
-class GrassEater extends LivingCreature{
+class GrassEater extends LivingCreature {
     constructor(x, y, index) {
         super(x, y, index)
         this.energy = 8
@@ -35,16 +35,17 @@ class GrassEater extends LivingCreature{
         this.multiply++;
         var emptyCells = this.chooseCell(0);
         var newCell = random(emptyCells);
+        setTimeout(function () {
+            if (newCell && this.multiply >= 15) {
+                var newX = newCell[1];
+                var newY = newCell[0];
+                matrix[newY][newX] = 2;
 
-        if (newCell && this.multiply >= 15) {
-            var newX = newCell[1];
-            var newY = newCell[0];
-            matrix[newY][newX] = 2;
-
-            var newGr = new GrassEater(newX, newY);
-            grassEaterArr.push(newGr);
-            this.multiply = 0;
-        }
+                var newGr = new GrassEater(newX, newY);
+                grassEaterArr.push(newGr);
+                this.multiply = 0;
+            }
+        }, 4000)
     }
 
     move() {
