@@ -245,7 +245,7 @@ var clickCount = 0;
 function draw4(evt) {
     clickCount++;
     console.log(evt);
-    var str = "sammer" + clickCount;
+    var str = "summer" + clickCount;
     this.innerText = str;
 }
 function draw4() {
@@ -331,103 +331,62 @@ function windowLoad() {
 }
 window.onload = windowLoad;
 
-function mul() {
-    this.multiply++;
-    var emptyCells = this.multiply;
-    var newCell = random(emptyCells);
 
-    if (newCell && this.multiply >= 2) {
-        var newX = newCell[0];
-        var newY = newCell[1];
-        matrix[newY][newX] = 2;
 
-        var newGr = new GrassEater(newX, newY);
-        grassEaterArr.push(newGr);
-        this.multiply = 0;
-    }
-    this.multiply++;
-    var emptyCells = this.multiply;
-    var newCell = random(emptyCells);
-
-    if (newCell && this.multiply >= 20) {
-        var newX = newCell[0];
-        var newY = newCell[1];
-        matrix[newY][newX] = 4;
-
-        var newGr = new shun(newX, newY);
-        shunArr.push(newGr);
-        this.multiply = 0;
-    }
-}
-
-var clickCount = 1;
-function mul(evt) {
+var clickCount = 3;
+function zmer(evt) {
     clickCount++;
     console.log(evt);
     var str = "sammer" + clickCount;
     this.innerText = str;
 }
-
-
-function mul() {
-
-    for (let y = 0; y < matrix.length; y++) {
-        for (let x = 0; x < matrix[y].length; x++) {
-            if (matrix[y][x] == 1) {
-                fill('#FFFF00')
-            } else if (matrix[y][x] == 2) {
-                fill('#FFFF00')
-            } else if (matrix[y][x] == 4) {
-                fill('#FFFF00')
-            } else if (matrix[y][x] == 6) {
-                fill('#FFFF00')
-            } else if (matrix[y][x] == 0) {
-                fill('#FFFF00')
-            } else if (matrix[y][x] == 3) {
-                fill('#FFFF00')
-            } else if (matrix[y][x] == 5) {
-                fill('#FFFF00')
-            } else if (matrix[y][x] == 7) {
-                fill('#FFFF00')
+function zmer() {
+    document.addEventListener("click", function () {
+        setInterval(function () {
+            document.getElementById("pElement3").click();
+            for (let y = 0; y < matrix.length; y++) {
+                for (let x = 0; x < matrix[y].length; x++) {
+                    if (matrix[y][x] == 1) {
+                        fill('yellow')
+                    } else if (matrix[y][x] == 2) {
+                        fill('yellow')
+                    } else if (matrix[y][x] == 4) {
+                        fill('yellow')
+                    } else if (matrix[y][x] == 6) {
+                        fill('yellow')
+                    } else if (matrix[y][x] == 0) {
+                        fill('yellow')
+                    } else if (matrix[y][x] == 3) {
+                        fill('yellow')
+                    } else if (matrix[y][x] == 5) {
+                        fill('yellow')
+                    } else if (matrix[y][x] == 7) {
+                        fill('yellow')
+                    }
+                    rect(x * side, y * side, side, side)
+                }
             }
-            rect(x * side, y * side, side, side)
-        }
-    }
 
 
-this.multiply++;
-var emptyCells = this.multiply
-var newCell = random(emptyCells);
+        }, 1);
 
-if (newCell && this.multiply >= 2) {
-    var newX = newCell[0];
-    var newY = newCell[1];
-    matrix[newY][newX] = 2;
-
-    var newGr = new GrassEater(newX, newY);
-    grassEaterArr.push(newGr);
-    this.multiply = 0;
-}
-
-this.multiply++;
-var emptyCells = this.multiply;
-var newCell = random(emptyCells);
-
-if (newCell && this.multiply >= 20) {
-    var newX = newCell[0];
-    var newY = newCell[1];
-    matrix[newY][newX] = 4;
-
-    var newGr = new Shun(newX, newY);
-    shunArr.push(newGr);
-    this.multiply = 0;
-}
- console.log("summer");
+    });
+    
 
 }
 
-var p = document.getElementById("pElement6");
-p.addEventListener("click", mul);
+
+var p = document.getElementById("pElement3");
+p.addEventListener("click", zmer);
+
+
+
+
+
+
+
+
+
 
 
 
